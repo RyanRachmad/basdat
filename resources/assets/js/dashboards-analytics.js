@@ -269,6 +269,7 @@
         }
       }
     };
+  
   if (typeof totalRevenueChartEl !== undefined && totalRevenueChartEl !== null) {
     const totalRevenueChart = new ApexCharts(totalRevenueChartEl, totalRevenueChartOptions);
     totalRevenueChart.render();
@@ -357,14 +358,14 @@
 
   // Profit Report Line Chart
   // --------------------------------------------------------------------
-  const profileReportChartEl = document.querySelector('#profileReportChart'),
+  const profileReportChartE1 = document.querySelector("#profileReportChart"),
     profileReportChartConfig = {
       chart: {
         height: 80,
-        // width: 175,
-        type: 'line',
+        width: 175,
+        type: "line",
         toolbar: {
-          show: false
+          show: false,
         },
         dropShadow: {
           enabled: true,
@@ -372,52 +373,51 @@
           left: 5,
           blur: 3,
           color: config.colors.warning,
-          opacity: 0.15
+          opacity: 0.15,
         },
         sparkline: {
-          enabled: true
-        }
+          enabled: true,
+        },
       },
       grid: {
         show: false,
         padding: {
-          right: 8
-        }
+          right: 8,
+        },
       },
       colors: [config.colors.warning],
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
       stroke: {
         width: 5,
-        curve: 'smooth'
+        curve: "smooth",
       },
       series: [
         {
-          data: [110, 270, 145, 245, 205, 285]
-        }
+          data: [3856, 21615, 18196],
+        },
       ],
       xaxis: {
         show: false,
         lines: {
-          show: false
+          show: false,
         },
         labels: {
-          show: false
+          show: false,
         },
         axisBorder: {
-          show: false
-        }
+          show: false,
+        },
       },
       yaxis: {
-        show: false
-      }
+        show: false,
+      },
     };
-  if (typeof profileReportChartEl !== undefined && profileReportChartEl !== null) {
-    const profileReportChart = new ApexCharts(profileReportChartEl, profileReportChartConfig);
+  if (typeof profileReportChartE1 !== undefined && profileReportChartE1 !== null) {
+    const profileReportChart = new ApexCharts(profileReportChartE1, profileReportChartConfig);
     profileReportChart.render();
   }
-
   // Order Statistics Chart
   // --------------------------------------------------------------------
   const chartOrderStatistics = document.querySelector('#orderStatisticsChart'),
@@ -427,7 +427,7 @@
         width: 130,
         type: 'donut'
       },
-      labels: ['Electronic', 'Sports', 'Decor', 'Fashion'],
+      labels: ['EHE', 'Sports', 'Decor', 'Fashion'],
       series: [85, 15, 50, 50],
       colors: [config.colors.primary, config.colors.secondary, config.colors.info, config.colors.success],
       stroke: {
